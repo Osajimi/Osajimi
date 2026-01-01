@@ -1,0 +1,72 @@
+/* ===== Corps de la page ===== */
+.about-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #3290FC 20%, #8CB1FF 80%);
+  color: #1a1a1a;
+}
+
+/* ===== Contenu principal ===== */
+.about-content {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ===== Lien retour ===== */
+.back-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #3290FC;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  background: #1a66cc;
+}
+
+/* ===== Footer ===== */
+.about-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #fff;
+  margin-top: auto;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .about-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .about-content h1 {
+    font-size: 28px;
+  }
+}
+

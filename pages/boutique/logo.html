@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Logos – Produit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product-style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-link">← Retour au Catalogue</a>
+</header>
+
+<div class="product-page">
+  <div class="product-gallery">
+    <div class="main-image">
+      <img id="productImg" src="../../assets/images/exemple_logo.png" alt="Logo">
+    </div>
+    <div class="thumbnails">
+      <img class="thumb active" src="../../assets/images/exemple_logo.png" alt="Simple Logo">
+      <img class="thumb" src="../../assets/images/Osajimi_logo.png" alt="Detailed Logo">
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h1>Logo</h1>
+
+    <!-- Tableau -->
+    <table class="option-table">
+      <thead>
+        <tr>
+          <th>Quantité</th>
+          <th>Prix unitaire (€)</th>
+          <th>Prix total (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>50</td><td>50</td></tr>
+        <tr><td>2</td><td>50</td><td>90</td></tr>
+        <tr><td>3</td><td>50</td><td>127.50</td></tr>
+      </tbody>
+    </table>
+
+    <div class="product-options">
+      <p>Type :</p>
+      <div class="option-buttons" id="logoTypeBtns">
+        <button data-value="simple" class="active">Simple Logo (50€)</button>
+        <button data-value="detailed">Detailed Logo (80€)</button>
+      </div>
+
+      <p>Quantité :</p>
+      <input type="number" id="productQty" value="1" min="1">
+    </div>
+
+    <p class="price">Prix : <span id="productPrice">50.00€</span></p>
+    <a href="../../commi_mail.html" target="_blank" class="buy-btn">Commissioner par email</a>
+  </div>
+</div>
+
+<script src="js/gallery.js"></script>
+<script src="js/extras.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
+

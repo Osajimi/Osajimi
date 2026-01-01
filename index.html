@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osajimi</title>
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <meta name="description" content="Petite Entreprise d'Art et Création de Design">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container">
+
+    <!-- Colonne gauche -->
+    <div class="left-panel">
+      <img src="assets/images/image_accueil.png" alt="Logo" class="logo-large">
+
+      <h1 id="site-description-text">Bienvenue chez Osajimi</h1>
+
+      <nav>
+        <ul>
+          <li><a href="public/boutique/index.html" target="_blank">Catalogue de nos Commissions</a></li>
+          <li><a href="assets/therms_fr.pdf" target="_blank">Nos Conditions Générales</a></li>
+          <li><a href="public/about.html" target="_blank">A propos de Nous</a></li>
+        </ul>
+      </nav>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="contact_mail.html" target="_blank" >Contact</a>
+        </div>
+        <p>&copy; 2026 Osajimi</p>
+      </footer>
+    </div>
+
+    <!-- Colonne droite -->
+    <div class="right-panel">
+      <img src="assets/images/illustration_exemple_1.png" class="active" alt="Slide 1">
+      <img src="assets/images/illustration_exemple_2.png" alt="Slide 2">
+    </div>
+
+  </div>
+
+  <!-- Script pour la galerie d'images -->
+  <script>
+    const slides = document.querySelectorAll('.right-panel img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000); // changement toutes les 3 secondes
+  </script>
+</body>
+
+</html>
+

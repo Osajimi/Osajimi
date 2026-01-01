@@ -1,0 +1,124 @@
+/* === Container principal === */
+.main-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* === Colonne gauche === */
+.left-panel {
+  width: 35%;
+  background: #f5f5f5;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* CENTRER le contenu horizontalement */
+  gap: 20px;
+  text-align: center; /* Texte centré pour h1 et p */
+}
+
+.logo-large {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.left-panel h1 {
+  font-size: 32px;
+  margin: 0;
+  color: #333;
+}
+
+.left-panel nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-panel nav ul li {
+  margin: 15px 0;
+}
+
+.left-panel nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #007BFF;
+}
+
+.left-panel nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Texte descriptif */
+.left-panel p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* === Footer dans colonne gauche === */
+.left-panel .site-footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.left-panel .site-footer .footer-links {
+  margin-bottom: 10px;
+}
+
+.left-panel .site-footer .footer-links a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.left-panel .site-footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* === Colonne droite (galerie images) === */
+.right-panel {
+  width: 65%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* dégradé bleu */
+}
+
+.right-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Rogne les images si nécessaire */
+  border-radius: 10px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.right-panel img.active {
+  opacity: 1;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-panel, .right-panel {
+    width: 100%;
+  }
+  .right-panel {
+    height: 300px;
+  }
+  .logo-large {
+    margin: 0 auto 20px auto;
+  }
+}
+
