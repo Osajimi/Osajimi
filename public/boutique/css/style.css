@@ -6,6 +6,11 @@ body {
   color: #C2C3FC;
 }
 
+.promo {
+  position: center;
+  text-align: center;
+  color : #FF7C61
+}
 header {
   position: relative;
   color: black;
@@ -280,5 +285,6 @@ header .logo {
     font-size: 14px;
     color: #333;
 }
+
 
 
