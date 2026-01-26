@@ -1,35 +1,28 @@
 const PRODUCTS = [
   {
     id: 1,
-    title: "DIY Acrylic Stand",
+    title: "Emojis",
     price: 24.90,
-    category: "diy",
+    category: "sticker",
     image: "img/product1.jpg",
-    description: "High-quality acrylic stand perfect for decoration or display."
+    description: "Emoji pour twitch ou discord."
   },
   {
     id: 2,
-    title: "Acrylic Keychain",
+    title: "illustration",
     price: 14.90,
-    category: "keychain",
+    category: "art",
     image: "img/product2.jpg",
-    description: "Cute acrylic keychain with a durable and glossy finish."
+    description: "Illustration personnalisée"
   },
   {
     id: 3,
-    title: "Custom Acrylic Figure",
+    title: "Logo",
     price: 39.90,
-    category: "figure",
+    category: "extras",
     image: "img/product3.jpg",
-    description: "Custom acrylic figure made from your own design."
+    description: "Logo pour entreprise ou projets."
   },
-  {
-    id: 4,
-    title: "DIY Acrylic Plate",
-    price: 19.90,
-    category: "diy",
-    image: "img/product4.jpg",
-    description: "Decorative acrylic plate, perfect as a gift."
-  }
+ 
 ];
 
