@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commande de commission - Osajimi</title>
+  <link rel="stylesheet" href="style.css"> <!-- ton CSS existant -->
+  <style>
+    /* FORMULAIRE COMMISSIONS OSajimi */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    .commission-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .container-form {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .commission-section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .commission-section label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .commission-section input[type="text"],
+    .commission-section input[type="email"],
+    .commission-section select,
+    .commission-section textarea,
+    .commission-section input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .commission-section button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background: #ff5f5f;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .commission-section button:hover {
+      background: #e14e4e;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container-form {
+        padding: 15px;
+      }
+      .commission-section h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header/logo -->
+  <header>
+    <a href="index.html"><img src="assets/images/image_accueil.png" alt="Osajimi Logo"></a>
+  </header>
+
+  <!-- Formulaire de commission -->
+  <section class="commission-section">
+    <div class="container-form">
+      <h2>Commander une commission</h2>
+
+      <form action="https://formspree.io/f/xojdozpy" method="POST" enctype="multipart/form-data">
+
+        <!-- Auto-reply et sujet -->
+        <input type="hidden" name="_subject" value="Nouvelle commande de commission Illustration 🎨">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Champs formulaire -->
+        <label>Nom/ Prénom :</label>
+        <input type="text" name="name" required>
+        
+        <label>Pseudo :</label>
+        <input type="text" name="pseudo" required>
+
+        <label>Email :</label>
+        <input type="email" name="email" required>
+
+        <label>Type de logo :</label>
+        <select name="character_type" required>
+          <option value="Simple">simple</option>
+          <option value="Détailé">détailé</option>
+        </select>
+        
+        <label>Quantité :</label>
+        <input type="number" name="quantity" min="1" value="1" required>
+      
+        <label>Description / détails :</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <label>Image(s) de référence :</label>
+        <input type="file" name="attachment" accept=".png,.jpg,.jpeg,.gif" multiple>
+
+        <button type="submit">Envoyer la demande</button>
+
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
+
