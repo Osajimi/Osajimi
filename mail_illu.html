@@ -105,12 +105,14 @@
     <div class="container-form">
       <h2>Commander une commission</h2>
 
-      <form action="https://formspree.io/f/xojdozpy" method="POST" enctype="multipart/form-data">
+      <!-- Redirection vers la page Merci -->
+      <input type="hidden" name="_next" value="https://osajimi.github.io/Osajimi/thanks.html">
 
-        <!-- Auto-reply et sujet -->
-        <input type="hidden" name="_next" value="https://osajimi.github.io/Osajimi/thanks.html">
-        <input type="hidden" name="_subject" value="Nouvelle commande de commission Illustration 🎨">
-        <input type="hidden" name="_template" value="table">
+      <!-- Sujet du mail et auto-reply -->
+      <input type="hidden" name="_subject" value="Nouvelle commande de commission 🎨">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Bonjour ! Nous avons bien reçu votre demande de commission. Nous vous répondrons bientôt ✨">
+      <input type="hidden" name="_captcha" value="false">
 
         <!-- Champs formulaire -->
         <label>Nom/ Prénom :</label>
@@ -155,3 +157,4 @@
 
 </body>
 </html>
+
