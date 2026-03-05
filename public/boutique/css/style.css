@@ -288,5 +288,52 @@ header .logo {
 }
 
 
+/* Container principal centré */
+.product-page {
+  display: flex;               /* met la vidéo et le texte côte à côte */
+  align-items: flex-start;     /* aligne en haut */
+  gap: 40px;                   /* espace entre vidéo et texte */
+  max-width: 900px;            /* largeur max du bloc central */
+  margin: 40px auto;           /* centrer le bloc sur la page */
+  justify-content: center;     /* centre les enfants horizontalement */
+  text-align: left;            /* texte aligné à gauche du bloc texte */
+}
 
+/* Galerie vidéo à gauche */
+.product-gallery {
+  flex-shrink: 0;              /* empêche la vidéo de rétrécir */
+}
 
+.product-gallery video {
+  width: 300px;                /* largeur de la vidéo */
+  max-width: 100%;             /* responsive */
+  border-radius: 10px;         /* coins arrondis */
+  display: block;              /* évite l’inline par défaut */
+}
+
+/* Infos produit à droite */
+.product-info {
+  flex: 1;                     /* prend le reste de l’espace */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Bouton commission */
+.buy-btn {
+  display: inline-block;       /* prend seulement la largeur du texte */
+  padding: 10px 20px;          /* espace autour du texte */
+  background: #3290FC;         /* couleur du bouton */
+  color: #fff;                 /* texte blanc */
+  border-radius: 6px;          /* coins arrondis */
+  text-decoration: none;       /* supprime le soulignement */
+  text-align: center;           /* centre le texte à l’intérieur */
+  font-weight: bold;
+  transition: 0.3s;
+  width: auto;                  /* ne pas prendre toute la largeur */
+  max-width: 100%;              /* responsive si bloc trop petit */
+}
+
+.buy-btn:hover {
+  background: #1a66cc;          /* effet au survol */
+}
